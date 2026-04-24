@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "surface-tint": "#4d44e3",
+                                                "on-tertiary-container": "#b2e1ff",
+                                                "on-secondary-fixed-variant": "#3f465c",
+                                                "on-tertiary-fixed-variant": "#004c69",
+                                                "surface-variant": "#d3e4fe",
+                                                "primary-fixed": "#e2dfff",
+                                                "inverse-on-surface": "#eaf1ff",
+                                                "surface-container-lowest": "#ffffff",
+                                                "surface-container-high": "#dce9ff",
+                                                "primary-fixed-dim": "#c3c0ff",
+                                                "tertiary-fixed": "#c4e7ff",
+                                                "error-container": "#ffdad6",
+                                                "on-primary-fixed": "#0f0069",
+                                                "surface-container-low": "#eff4ff",
+                                                "on-tertiary-fixed": "#001e2c",
+                                                "on-surface": "#0b1c30",
+                                                "error": "#ba1a1a",
+                                                "on-secondary-fixed": "#131b2e",
+                                                "on-background": "#0b1c30",
+                                                "surface": "#f8f9ff",
+                                                "tertiary": "#004e6b",
+                                                "on-error-container": "#93000a",
+                                                "on-secondary-container": "#5c647a",
+                                                "surface-bright": "#f8f9ff",
+                                                "tertiary-fixed-dim": "#7bd0ff",
+                                                "on-primary": "#ffffff",
+                                                "secondary-container": "#dae2fd",
+                                                "on-primary-container": "#dad7ff",
+                                                "outline-variant": "#c7c4d8",
+                                                "on-surface-variant": "#464555",
+                                                "inverse-surface": "#213145",
+                                                "primary": "#3525cd",
+                                                "surface-dim": "#cbdbf5",
+                                                "on-tertiary": "#ffffff",
+                                                "background": "#f8f9ff",
+                                                "surface-container-highest": "#d3e4fe",
+                                                "secondary": "#565e74",
+                                                "on-secondary": "#ffffff",
+                                                "surface-container": "#e5eeff",
+                                                "secondary-fixed": "#dae2fd",
+                                                "outline": "#777587",
+                                                "primary-container": "#4f46e5",
+                                                "inverse-primary": "#c3c0ff",
+                                                "on-error": "#ffffff",
+                                                "tertiary-container": "#00678c",
+                                                "secondary-fixed-dim": "#bec6e0",
+                                                "on-primary-fixed-variant": "#3323cc"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.125rem",
+                                                "lg": "0.25rem",
+                                                "xl": "0.5rem",
+                                                "full": "0.75rem"
+                                        },
+                                        "spacing": {
+                                                "stack-xl": "64px",
+                                                "unit": "8px",
+                                                "stack-lg": "32px",
+                                                "stack-xs": "4px",
+                                                "container-max": "1280px",
+                                                "stack-md": "16px",
+                                                "stack-sm": "8px",
+                                                "margin-page": "40px",
+                                                "gutter": "24px"
+                                        },
+                                        "fontFamily": {
+                                                "body-lg": ["Inter"],
+                                                "label-caps": ["Inter"],
+                                                "body-md": ["Inter"],
+                                                "h3": ["Manrope"],
+                                                "body-sm": ["Inter"],
+                                                "h1": ["Manrope"],
+                                                "h2": ["Manrope"],
+                                                "button": ["Inter"]
+                                        },
+                                        "fontSize": {
+                                                "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                                                "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                                                "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                                                "h3": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                                                "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                                                "h1": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                                                "h2": ["32px", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                                                "button": ["15px", { "lineHeight": "1", "fontWeight": "600" }]
+                                        }
+                                }
+                        }
+                }
+        </script>
+
+        <link href="css/style.css" rel="stylesheet" />
+        <title>EmailCraft - Precision-Engineered HTML Email Templates</title>
+</head>
+
+<body
+        class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+        <!-- TopNavBar -->
+        <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+                <div class="flex justify-between items-center h-16 max-w-7xl mx-auto px-6 lg:px-8">
+                        <div class="text-xl font-extrabold tracking-tighter text-slate-900">EmailCraft</div>
+                        <div
+                                class="hidden md:flex items-center gap-8 font-['Manrope'] text-sm font-medium tracking-tight">
+                                <a class="text-slate-600 hover:text-indigo-600 transition-colors duration-200"
+                                        href="#">Services</a>
+                                <a class="text-slate-600 hover:text-indigo-600 transition-colors duration-200"
+                                        href="#">Portfolio</a>
+                                <a class="text-slate-600 hover:text-indigo-600 transition-colors duration-200"
+                                        href="#">Pricing</a>
+                                <a class="text-slate-600 hover:text-indigo-600 transition-colors duration-200"
+                                        href="#">Testimonials</a>
+                        </div>
+                        <div class="flex items-center gap-4">
+                                <button
+                                        class="text-slate-600 font-button text-button px-4 py-2 active:scale-95 transition-transform duration-150">Login</button>
+                                <button
+                                        class="bg-primary text-on-primary font-button text-button px-6 py-2.5 rounded-lg shadow-sm hover:brightness-110 active:scale-95 transition-all">Get
+                                        Started</button>
+                        </div>
+                </div>
+        </nav>
+        <!-- Hero Section -->
+        <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-surface-container-low">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+                        <div
+                                class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-label-caps font-label-caps mb-6">
+                                <span class="material-symbols-outlined text-[16px] mr-2"
+                                        style="font-variation-settings: 'FILL' 1;">bolt</span>
+                                Precision Email Engineering
+                        </div>
+                        <h1 class="font-h1 text-h1 text-on-surface max-w-4xl mx-auto mb-6">
+                                Elevate Your Business with Precision-Engineered Email Templates
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                                Modern, responsive, and conversion-optimized HTML email designs that work flawlessly
+                                across all devices and clients.
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                                <button
+                                        class="bg-primary text-on-primary font-button text-button px-8 py-4 rounded-xl shadow-md hover:brightness-110 active:scale-95 transition-all">Book
+                                        a Project</button>
+                                <button
+                                        class="bg-white border border-outline text-on-surface font-button text-button px-8 py-4 rounded-xl shadow-sm hover:bg-slate-50 active:scale-95 transition-all">View
+                                        Portfolio</button>
+                        </div>
+                </div>
+                <!-- Decorative subtle gradient glow -->
+                <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-tertiary/10 rounded-full blur-3xl"></div>
+        </header>
+        <!-- Why Choose Us -->
+        <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                                <div class="flex flex-col items-start">
+                                        <div
+                                                class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-6">
+                                                <span class="material-symbols-outlined">devices</span>
+                                        </div>
+                                        <h3 class="font-h3 text-h3 text-on-surface mb-3">Responsive &amp; Tested</h3>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">
+                                                Flawless display on Gmail, Outlook, and Mobile. We use Litmus testing to
+                                                ensure 100% compatibility.
+                                        </p>
+                                </div>
+                                <div class="flex flex-col items-start">
+                                        <div
+                                                class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-6">
+                                                <span class="material-symbols-outlined">code</span>
+                                        </div>
+                                        <h3 class="font-h3 text-h3 text-on-surface mb-3">Clean HTML/CSS</h3>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">
+                                                Bulletproof code that avoids the spam folder. Lightweight,
+                                                standards-compliant, and secure.
+                                        </p>
+                                </div>
+                                <div class="flex flex-col items-start">
+                                        <div
+                                                class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-6">
+                                                <span class="material-symbols-outlined">palette</span>
+                                        </div>
+                                        <h3 class="font-h3 text-h3 text-on-surface mb-3">Branded &amp; Beautiful</h3>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">
+                                                Minimalist designs that reflect your brand identity. Every pixel serves
+                                                a purpose for conversion.
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Portfolio Section -->
+        <section class="py-24 bg-surface-container-low">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                        <div class="text-center mb-16">
+                                <h2 class="font-h2 text-h2 text-on-surface mb-4">Our Portfolio</h2>
+                                <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">
+                                        A selection of precision-engineered templates crafted for performance and
+                                        clarity.
+                                </p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <!-- Portfolio Card 1 -->
+                                <div
+                                        class="bg-white rounded-xl overflow-hidden border border-slate-200 card-hover-lift">
+                                        <img alt="Welcome Email Design" class="w-full aspect-[4/3] object-cover"
+                                                data-alt="Clean and professional welcome email layout with minimalist typography and a prominent call-to-action button on a white background"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOto2ZJqE42Ag6-Iz3_FcFz0ReqZF_ogdvfyTCtGwyFPyrSdztxnr9R21dvoQiltrmFMfgfoqyrUMtuWjWN2dbrkIIZTcGx9nWCSoFSBngZ2PUzp6Ys0Yio6T_KBFxlkXcZFbFYJ-83SZJY0MiJJr5TPueFwyoAo7ApNTz7Ee7Oe49jytmRK1UZBl5hSUUakEli-dbyOROQuxlblsuMJLDd98VGVw84Jt5XOwnmNi5ciMrPGpy2ywIJFOc4xmCG9A0xzG_fAeCoTs" />
+                                        <div class="p-6">
+                                                <h3 class="font-h3 text-[18px] text-on-surface">Welcome Email Design
+                                                </h3>
+                                                <div class="flex gap-2 mt-3">
+                                                        <span
+                                                                class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] font-semibold uppercase tracking-wider">Onboarding</span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Portfolio Card 2 -->
+                                <div
+                                        class="bg-white rounded-xl overflow-hidden border border-slate-200 card-hover-lift">
+                                        <img alt="Responsive Email Preview" class="w-full aspect-[4/3] object-cover"
+                                                data-alt="A smartphone and laptop displaying synchronized responsive email layouts with blue accents and high-quality photography"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeFKfR9A_24D4LOdFjixFA0IzNwW9sC8EPuY6anXnUuYzY5-11JzqvUKevwTTll535LQMMRYp0fxPLaTdPwDChz9Sn8NHG4PY3yQC9HRxOtNA0du-zduJX4EphfYIVmIgGGzKKm49gwyPg2zLgP1U7x-QI9BwnqnToAajpq-Zw3Lcmb3Ve32-0L0yNXK2quYQEElc_lyFiEiU6Vl3Qj1oL_-0YXY4uJQ9jj1Z_Psiz0zzhO1ltzDS-Vs3fSVyQrFVBWtMfH0dk1G4" />
+                                        <div class="p-6">
+                                                <h3 class="font-h3 text-[18px] text-on-surface">Responsive Email Preview
+                                                </h3>
+                                                <div class="flex gap-2 mt-3">
+                                                        <span
+                                                                class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] font-semibold uppercase tracking-wider">Mobile-First</span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Portfolio Card 3 -->
+                                <div
+                                        class="bg-white rounded-xl overflow-hidden border border-slate-200 card-hover-lift">
+                                        <img alt="Transactional Email Template" class="w-full aspect-[4/3] object-cover"
+                                                data-alt="Professional order confirmation email showing clear receipt details, shipping progress bar, and soft indigo brand colors"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC45EXGw_UdplrCn7WMZCigoOV3UxyAenF9Jz_7gMxqYfkPq9iKP-uXRBZgO8uJQZzarRWt5Vxm0kOXq-DEBVPUmqPqQFbIQiYtSmW6c8U5bhizkHDOwWx6_fsup0Uk4BUJQ-ykCrBN9UCF0MH71DDIIFt0udPvjHrZyhKxXT92pF3x5ngPrQ8cLKNoit6UkykJrT-KDFqOcBMbBQvusfnE6LECSL2hyXaq72h-IKO-BKJOY1smBBpXC0Cpwt78yozqF3KKZiVjy4c" />
+                                        <div class="p-6">
+                                                <h3 class="font-h3 text-[18px] text-on-surface">Transactional Email
+                                                        Template</h3>
+                                                <div class="flex gap-2 mt-3">
+                                                        <span
+                                                                class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] font-semibold uppercase tracking-wider">E-Commerce</span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Portfolio Card 4 -->
+                                <div
+                                        class="bg-white rounded-xl overflow-hidden border border-slate-200 card-hover-lift">
+                                        <img alt="Email Template Code + Preview"
+                                                class="w-full aspect-[4/3] object-cover"
+                                                data-alt="Split screen showing clean HTML code with syntax highlighting on one side and a beautiful email preview on the other"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoPOBoefjnk_HriZoubgzYGpgUUoh4abTR4vbMT5Qnd2XBmGnAOMOHIof6lWb_-1st6nkOAo0LspkohxqAxXL2ssLk6DZvOn_7Z74NACfn8ybLZaDRJr2DUN9z_wXjbFJ5DVQhKGirX4WO9SEz9_oDju8DKt0BpSl-YNKEYYRiCptTFh3gBLERNG9RSOsqfXD5kVKE4nU6Q41M6fTuwat2nyppebK9j1lqtox0d1v3FgT0NjBWHns8fPXN9QKI1kHOOkdnBxwMOWo" />
+                                        <div class="p-6">
+                                                <h3 class="font-h3 text-[18px] text-on-surface">Email Template Code +
+                                                        Preview</h3>
+                                                <div class="flex gap-2 mt-3">
+                                                        <span
+                                                                class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] font-semibold uppercase tracking-wider">Development</span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Portfolio Card 5 -->
+                                <div
+                                        class="bg-white rounded-xl overflow-hidden border border-slate-200 card-hover-lift">
+                                        <img alt="Marketing Email Campaign" class="w-full aspect-[4/3] object-cover"
+                                                data-alt="Vibrant marketing email campaign with dynamic product grids and festive typography for a seasonal promotion"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRlayX3i_tpubOwONf5JA8TTXQ00O0QIISQAIh52v6DljUT-bBsKe9iWzx0NU133tJECQ3WOmOt0jG51GFlJ6ItXWsC8uVTB_CFCAOkabQOdzFx1qm3nSminsrfOxtpNwH5f1s2J4BhcOiq8zyBZLTXtfRWc-2nhU_QvSOq5F_7TtdnOsOWfMFwD3oMxYla_y_3VbfsrYqMA0OWWqUf_oCMDyc9KAbsIlCz1FsbCTw10wDkEnc-q1RssYxmBY4WAh0JQfPOjcPK-I" />
+                                        <div class="p-6">
+                                                <h3 class="font-h3 text-[18px] text-on-surface">Marketing Email Campaign
+                                                </h3>
+                                                <div class="flex gap-2 mt-3">
+                                                        <span
+                                                                class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] font-semibold uppercase tracking-wider">Sales</span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Portfolio Card 6 -->
+                                <div
+                                        class="bg-white rounded-xl overflow-hidden border border-slate-200 card-hover-lift">
+                                        <img alt="Notification Email System" class="w-full aspect-[4/3] object-cover"
+                                                data-alt="System alert notification email design using modern iconography and high-contrast text for critical updates"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBCjP5Tk0d2L0tFzX9iisunTogBCyi5cFkyCJt_5lFHvGTIqffrP2v2hCujoqCGmv_3aFgQWroLJBNDj3sKlVVshKzGoCBhKVak2JVFEurCQaQYmu0Qd2-tWOE-v_X3WL0CxOQBp5tIBa11b1z4v7UseOGv_O6Q_MnofxCVKBstBwfhga-jkNKS-yIJ8_ZbhoD3XXFZL5EFu0A2Q76JkLvRmZUpKaXmc9AbARbtzj_PdaY97aZBpCtbIUsXLCLJCm_P-5IuXwD45Q" />
+                                        <div class="p-6">
+                                                <h3 class="font-h3 text-[18px] text-on-surface">Notification Email
+                                                        System</h3>
+                                                <div class="flex gap-2 mt-3">
+                                                        <span
+                                                                class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] font-semibold uppercase tracking-wider">SaaS</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Services Bento Grid -->
+        <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                        <h2 class="font-h2 text-h2 text-on-surface mb-12 text-center">Specialized Services</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-full">
+                                <div
+                                        class="md:col-span-2 bg-primary-container p-8 rounded-2xl flex flex-col justify-between text-on-primary">
+                                        <span class="material-symbols-outlined text-4xl mb-4">mail_outline</span>
+                                        <div>
+                                                <h3 class="font-h3 text-h3 mb-2">Marketing Campaigns</h3>
+                                                <p class="font-body-sm opacity-90">High-impact layouts designed to drive
+                                                        click-through rates and revenue growth for your recurring
+                                                        newsletters.</p>
+                                        </div>
+                                </div>
+                                <div
+                                        class="md:col-span-2 bg-surface-container-high p-8 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                                        <span
+                                                class="material-symbols-outlined text-4xl text-primary mb-4">receipt_long</span>
+                                        <div>
+                                                <h3 class="font-h3 text-h3 text-on-surface mb-2">Transactional Emails
+                                                </h3>
+                                                <p class="font-body-sm text-on-surface-variant">Receipts, passwords, and
+                                                        invoices that look professional and provide a cohesive brand
+                                                        experience.</p>
+                                        </div>
+                                </div>
+                                <div
+                                        class="md:col-span-1 bg-white p-8 rounded-2xl border border-slate-200 flex flex-col items-center text-center">
+                                        <span
+                                                class="material-symbols-outlined text-4xl text-tertiary mb-4">notifications_active</span>
+                                        <h3 class="font-h3 text-[18px] text-on-surface mb-2">System Notifications</h3>
+                                </div>
+                                <div
+                                        class="md:col-span-3 bg-surface p-8 rounded-2xl border border-slate-200 flex items-center gap-6">
+                                        <div
+                                                class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+                                                <span
+                                                        class="material-symbols-outlined text-3xl text-secondary">group_add</span>
+                                        </div>
+                                        <div>
+                                                <h3 class="font-h3 text-h3 text-on-surface mb-2">Custom Onboarding Flows
+                                                </h3>
+                                                <p class="font-body-sm text-on-surface-variant">Sequential automation
+                                                        emails that guide new users through your product journey
+                                                        effectively.</p>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Pricing Section -->
+        <section class="py-24 bg-surface-container-low">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                        <div class="text-center mb-16">
+                                <h2 class="font-h2 text-h2 text-on-surface mb-4">Transparent Pricing</h2>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Simple tiers to fit your
+                                        business growth.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <!-- Starter -->
+                                <div class="bg-white p-8 rounded-2xl border border-slate-200 flex flex-col">
+                                        <div class="mb-8">
+                                                <h4 class="font-label-caps text-label-caps text-slate-500 mb-2">Starter
+                                                </h4>
+                                                <div class="flex items-baseline gap-1">
+                                                        <span class="text-3xl font-bold text-on-surface">$499</span>
+                                                        <span class="text-sm text-slate-500">/project</span>
+                                                </div>
+                                        </div>
+                                        <ul class="flex-grow space-y-4 mb-8">
+                                                <li class="flex items-center gap-3 text-body-sm">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                                        1 Custom Template
+                                                </li>
+                                                <li class="flex items-center gap-3 text-body-sm">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                                        Fully Responsive Code
+                                                </li>
+                                                <li class="flex items-center gap-3 text-body-sm text-slate-400">
+                                                        <span
+                                                                class="material-symbols-outlined text-[20px]">do_not_disturb_on</span>
+                                                        Testing across 40+ clients
+                                                </li>
+                                        </ul>
+                                        <button
+                                                class="w-full py-3 rounded-xl border border-outline font-button text-button hover:bg-slate-50 transition-colors">Select
+                                                Starter</button>
+                                </div>
+                                <!-- Professional -->
+                                <div
+                                        class="bg-white p-8 rounded-2xl border-2 border-primary shadow-xl relative flex flex-col">
+                                        <div
+                                                class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 rounded-full text-[12px] font-bold">
+                                                MOST POPULAR</div>
+                                        <div class="mb-8">
+                                                <h4 class="font-label-caps text-label-caps text-primary mb-2">
+                                                        Professional</h4>
+                                                <div class="flex items-baseline gap-1">
+                                                        <span class="text-3xl font-bold text-on-surface">$1,299</span>
+                                                        <span class="text-sm text-slate-500">/project</span>
+                                                </div>
+                                        </div>
+                                        <ul class="flex-grow space-y-4 mb-8">
+                                                <li class="flex items-center gap-3 text-body-sm">
+                                                        <span class="material-symbols-outlined text-primary text-[20px]"
+                                                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                                        3 Custom Templates
+                                                </li>
+                                                <li class="flex items-center gap-3 text-body-sm">
+                                                        <span class="material-symbols-outlined text-primary text-[20px]"
+                                                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                                        Dark Mode Optimization
+                                                </li>
+                                                <li class="flex items-center gap-3 text-body-sm">
+                                                        <span class="material-symbols-outlined text-primary text-[20px]"
+                                                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                                        Litmus/Email on Acid Testing
+                                                </li>
+                                        </ul>
+                                        <button
+                                                class="w-full py-3 rounded-xl bg-primary text-on-primary font-button text-button hover:brightness-110 shadow-lg shadow-primary/20 transition-all">Select
+                                                Pro</button>
+                                </div>
+                                <!-- Enterprise -->
+                                <div class="bg-white p-8 rounded-2xl border border-slate-200 flex flex-col">
+                                        <div class="mb-8">
+                                                <h4 class="font-label-caps text-label-caps text-slate-500 mb-2">
+                                                        Enterprise</h4>
+                                                <div class="flex items-baseline gap-1">
+                                                        <span class="text-3xl font-bold text-on-surface">Custom</span>
+                                                </div>
+                                        </div>
+                                        <ul class="flex-grow space-y-4 mb-8">
+                                                <li class="flex items-center gap-3 text-body-sm">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                                        Unlimited Templates
+                                                </li>
+                                                <li class="flex items-center gap-3 text-body-sm">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                                        Full Design System
+                                                </li>
+                                                <li class="flex items-center gap-3 text-body-sm">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                                        Priority Support
+                                                </li>
+                                        </ul>
+                                        <button
+                                                class="w-full py-3 rounded-xl border border-outline font-button text-button hover:bg-slate-50 transition-colors">Contact
+                                                Us</button>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Final CTA Section -->
+        <section class="py-24">
+                <div class="max-w-5xl mx-auto px-6 lg:px-8">
+                        <div
+                                class="bg-inverse-surface rounded-[2rem] p-12 lg:p-20 text-center relative overflow-hidden">
+                                <h2 class="font-h2 text-h1 text-on-primary mb-6 relative z-10">Start Your Project Today
+                                </h2>
+                                <p
+                                        class="font-body-lg text-body-lg text-slate-300 max-w-xl mx-auto mb-10 relative z-10">
+                                        Ready to transform your email presence? Let's build something beautiful and
+                                        functional together.
+                                </p>
+                                <div class="flex justify-center relative z-10">
+                                        <button
+                                                class="bg-primary text-on-primary font-button text-button px-10 py-5 rounded-xl shadow-xl hover:brightness-110 active:scale-95 transition-all">
+                                                Book a Consultation
+                                        </button>
+                                </div>
+                                <!-- Abstract background shape -->
+                                <div
+                                        class="absolute top-0 right-0 w-1/2 h-full bg-primary/20 blur-[100px] -rotate-12 translate-x-1/2">
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Footer -->
+        <footer class="w-full mt-24 bg-slate-50 border-t border-slate-200">
+                <div class="max-w-7xl mx-auto py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="flex flex-col items-center md:items-start gap-2">
+                                <div class="text-lg font-bold text-slate-900">EmailCraft</div>
+                                <p class="font-['Manrope'] text-xs uppercase tracking-widest text-slate-500">© 2024
+                                        EmailCraft Professional. Precision email engineering.</p>
+                        </div>
+                        <div
+                                class="flex flex-wrap justify-center gap-6 font-['Manrope'] text-xs uppercase tracking-widest text-slate-500">
+                                <a class="hover:text-slate-900 underline underline-offset-4 transition-opacity"
+                                        href="#">Privacy Policy</a>
+                                <a class="hover:text-slate-900 underline underline-offset-4 transition-opacity"
+                                        href="#">Terms of Service</a>
+                                <a class="hover:text-slate-900 underline underline-offset-4 transition-opacity"
+                                        href="#">Contact Support</a>
+                                <a class="hover:text-slate-900 underline underline-offset-4 transition-opacity"
+                                        href="#">LinkedIn</a>
+                                <a class="hover:text-slate-900 underline underline-offset-4 transition-opacity"
+                                        href="#">Twitter</a>
+                        </div>
+                </div>
+        </footer>
+</body>
+
+</html>
